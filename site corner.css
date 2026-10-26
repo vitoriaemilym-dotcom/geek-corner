@@ -45,3 +45,22 @@ div{
    text-align: center;
    
 }
+footer {
+    background-color: #003049;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+.icon-list {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.icon-list a {
+    margin: 0 10px;
+}
+
+.icon-list a:hover {
+    transform: scale(1.1);
+}
