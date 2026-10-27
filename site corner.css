@@ -10,11 +10,11 @@ header{
    
  
     justify-content: space-between;
-    padding: 2%;
+    padding: 8px 3%;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     justify-content: space-between;
-    align-items:end;
+    align-items:center;
     border-bottom: 6px solid #697575;
     box-shadow: 0 6px 0 rgba(25, 98, 107, 0.15);
  ul {
