@@ -114,7 +114,53 @@ main {
 .banner p{
    font-size: 12px;
 }
-   
+
+#produtos {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.lista-produtos {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 2rem;
+   width: 100%;
+   max-width: 1200px;
+}
+
+.card-produto {
+   display: flex;
+   background-color: white;
+   border: 3px solid #697575;
+   box-shadow: 4px 4px 0 rgba(25, 98, 107, 0.2);
+}
+
+.card-produto figure {
+   margin: 0;
+}
+
+.card-produto a {
+   width: 100%;
+   text-decoration: none;
+   color: inherit;
+}
+
+.card-produto img {
+   width: 100%;
+   height: 220px;
+   padding: 5px;
+   object-fit: contain;
+}
+
+.card-produto figcaption {
+   text-align: center;
+}
+
+.preco {
+   font-weight: bold;
+   color: #003049;
+}
 
 footer {
     background-color: #003049;
