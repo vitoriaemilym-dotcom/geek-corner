@@ -99,7 +99,11 @@ main {
 .barra-pesquisa button:hover { background: #19626b; }
 
 .banner{
-   background-color: rgb(185, 206, 199);
+    background-image: url("Banner1.png");
+    background-size: cover;
+    background-position: center;
+
+    height: 250px;
    text-align: center;
    padding: 40px 3%;
 }
