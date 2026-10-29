@@ -249,7 +249,7 @@ input:focus-visible {
   outline-offset: 3px;
 }
 
-/* ===== Cabeçalho ===== */
+
 
 header img {
   width: 110px;
@@ -280,9 +280,9 @@ header a:hover { border: 2px solid #212529; }
 
 
 
-/* ===== Conteúdo principal ===== */
 main {
-  display: grid;
+
+   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-content: start;
   gap: 28px;
@@ -319,7 +319,7 @@ main ol {
   gap: 8px;
 }
 
-/* ===== Área principal do produto ===== */
+
 .produto-principal {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -352,7 +352,7 @@ aside {
   font-size: 30px;
 }
 
-/* ===== Campos e formulário ===== */
+
 form {
   display: grid;
   gap: 16px;
@@ -420,7 +420,9 @@ button:active {
   background-color: var(--azul-escuro);
 }
 
-/* ===== Tabelas ===== */
+
+
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -449,7 +451,7 @@ tr:nth-child(even) {
   background-color: var(--cinza-claro);
 }
 
-/* ===== Avaliações e artigos ===== */
+
 article {
   display: grid;
   align-content: start;
@@ -470,7 +472,7 @@ main > section:last-child {
   gap: 18px;
 }
 
-/* ===== Busca e página inicial ===== */
+
 .barra-pesquisa {
   display: flex;
   justify-content: center;
@@ -543,7 +545,7 @@ main > .banner {
   object-fit: contain;
 }
 
-/* ===== Rodapé ===== */
+
 footer {
   display: grid;
   justify-items: center;
@@ -605,7 +607,7 @@ footer a:focus-visible {
   justify-content: center;
 }
 
-/* ===== Adaptação para telas menores ===== */
+
 @media (max-width: 900px) {
   header {
     grid-template-columns: 1fr;
