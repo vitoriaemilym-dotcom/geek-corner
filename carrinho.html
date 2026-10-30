@@ -1,142 +1,201 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geek Corner - Carrinho</title>
+
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="carrinho.css">
 </head>
+
 <body>
     <header>
-        <h1>Carrinho de Compras</h1>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="produtos.html">Produtos</a>
+        <nav class="menu-esquerda">
+            <ul>
+                <li><a href="main.html">Inicio</a>
+                <li>
+                <li><a href="main.html#produtos">Produtos</a></li>
+            </ul>
+        </nav>
+    
+        <div>
+            <img src="img/imag/logo.jpeg" alt="Geek Corner">
+        </div>
+    
+        <nav class="menu-direita">
+            <ul>
+                <li>
+                    <a href="carrinho.html" id="icone-carrinho" title="Carrinho de compras">🛒</a>
+                </li>
+            </ul>
         </nav>
     </header>
+    
     <main>
+        <section class="area-carrinho">
+            <section class="carrinho-produtos">
+                <h2>Produtos no Carrinho</h2>
+                <article class="produto-carrinho">
+                    <img src="img/produtos/produto6.jpeg" alt="Pelúcia Totoro">
+                    <section>
+                        <h3>Pelúcia Totoro</h3>
+                        <p>
+                            Pelúcia do personagem Totoro do filme Meu Amigo Totoro.
+                        </p>
+                        <p class="preco">
+                            R$ 49,90
+                        </p>
+                        <label for="qtd-anime">Quantidade</label>
+                        <input type="number" id="qtd-anime" min="1" max="99" value="1">
+                    </section>
+                </article>
 
-        <section class="banner">
-            <h2>Obrigado pela compra!</h2>
-            <h2>Produtos no Carrinho</h2>
-            <article>
-                <img src="img/produtos/produto6.jpeg" alt="Pelúcia Totoro">
-                <h3>Pelúcia Totoro</h3>
+                <article class="produto-carrinho">
+                    <img src="img/produtos/produto3.jpeg" alt="Estátua Hornet Silksong">
+                    <section>
+                        <h3>Estátua Hornet Silksong</h3>
+                        <p>
+                            Estátua da personagem Hornet do jogo Hollow Knight.
+                        </p>
+                        <p class="preco">
+                            R$ 299,90
+                        </p>
+                        <label for="qtd-jogo">Quantidade</label>
+                        <input type="number" id="qtd-jogo" min="1" max="99" value="1">
+                    </section>
+                </article>
+    
+                <article class="produto-carrinho">
+                    <img src="img/produtos/produto9.jpeg" alt="Porta Lápis DK">
+                    <section>
+                        <h3>Porta Lápis DK</h3>
+                        <p>
+                            Porta lápis inspirado em Donkey Kong.
+                        </p>
+                        <p class="preco">
+                            R$ 39,90
+                        </p>
+                        <label for="qtd-dk">Quantidade</label>
+                        <input type="number" id="qtd-dk" min="1" max="99" value="1">
+                    </section>
+                </article>
+            </section>
+    
+            <aside class="resumo-compra">
+                <h2>Resumo do Pedido</h2>
+                <ul>
+                    <li>Pelúcia Totoro - R$ 49,90</li>
+                    <li>Estátua Hornet - R$ 299,90</li>
+                    <li>Porta Lápis DK - R$ 39,90</li>
+                </ul>
+                <hr>
                 <p>
-                    Pelúcia do personagem Totoro do Filme asiático Meu Amigo Totoro.
+                    <strong>Total: R$ 389,70</strong>
                 </p>
-                <p>Preço da unidade: R$ 49,90</p>
-                <label for="qtd-anime">Quantidade:</label>
-
-                <input type="number"
-                       id="qtd-anime"
-                       min="0"
-                       max="99"
-                       value="0"
-                       oninput="calcularTotal()">
-            </article>
-            <article>
-                <img src="img/produtos/produto3.jpeg" alt="Estátua Hornet Silksong">
-                <h>Estátua Hornet Silksong</h3>
-                <p>
-                    Estátua da personagem Hornet Silkson do jogo Hollow Knight.
-                </p>
-                <p>Preço da unidade: R$ 299,90</p>
-                <label for="qtd-jogo">Quantidade:</label>
-                <input type="number"
-                       id="qtd-jogo"
-                       min="0"
-                       max="99"
-                       value="0"
-                       oninput="calcularTotal()">
-            </article>
-            <article>
-                <img src="img/produtos/produto9.jpeg" alt="Porta Lápis donkey kong">
-                <h3>Porta Lápis DK</h3>
-                <p>
-                    Porta lápis/caneta do perdonagem Donkey Kong do jogo Donkey Kong Country.
-                </p>
-                <p>Preço da unidade: R$ 39,90</p>
-                <label for="qtd-heroi">Quantidade:</label>
-                <input type="number"
-                       id="qtd-heroi"
-                       min="0"
-                       max="99"
-                       value="0"
-                       oninput="calcularTotal()">
-
-            </article>
+            </aside>
         </section>
-        <section>
-            <h2>Dados da Compra</h2>
-    <section>
-    <h2>Finalizar Compra</h2>
 
-    <form action="#" method="post">
+    <section class="dados-compra">
+        <h2>Finalizar Compra</h2>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+    
+                <section class="campo-formulario">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" required>
+                </section>
+    
+                <section class="campo-formulario">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
+                </section>
+    
+                <section class="campo-formulario">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" required>
+                </section>
+
+                <section class="campo-formulario">
+                    <label for="nascimento">Data de Nascimento</label>
+                    <input type="date" id="nascimento" required>
+                </section>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+
+                <section class="campo-formulario">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" required>
+                </section>
+
+                <section class="campo-formulario">
+                    <label for="rua">Rua</label>
+                    <input type="text" id="rua" required>
+                </section>
+
+                <section class="campo-formulario">
+                    <label for="numero">Número</label>
+                    <input type="number" id="numero" required>
+                </section>
+
+                <section class="campo-formulario">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" required>
+                </section>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Entrega</legend>
+
+                <label>
+                    <input type="radio" name="entrega" required>
+                    Entrega Normal
+                </label>
+                <label>
+                    <input type="radio" name="entrega rapida" required>
+                    Entrega Rápida (+R$10,00)
+                </label>
+
+            </fieldset>
 
         <fieldset>
-            <legend>Dados Pessoais</legend>
-
-            <p>
-                <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" required>
-            </p>
-            <p>
-                <label for="email">E-mail:</label>
-
-                <input type="email" id="email" name="email" required placeholder="exemplo@gmail.com">
-            </p>
-            <p>
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
-            </p>
-            <p>
-                <label for="nascimento">Data de Nascimento:</label>
-                <input type="date" id="nascimento" name="nascimento"required>
-            </p>
-        </fieldset>
-        <fieldset>
-            <legend>Endereço de Entrega</legend>
-            <p>
-                <label for="rua">Rua:</label>
-                <input type="text" id="rua" name="rua" required>
-            </p>
-            <p>
-                <label for="numero">Número:</label>
-                <input type="number" id="numero" name="numero" required>
-            </p>
-            <p>
-                <label for="cidade">Cidade:</label>
-                <input type="text" id="cidade" name="cidade" required>
-            </p>
-            <p>
-                <label for="estado">Estado:</label>
-                <select id="estado" name="estado">
-                    <option value="">Selecione</option>
-                    <option value="sp">São Paulo</option>
-                    <option value="mg">Minas Gerais</option>
-                    <option value="rj">Rio de Janeiro</option>
-                    <option value="pr">Paraná</option>
-                </select>
-            </p>
-        </fieldset>
-        <fieldset>
+        
             <legend>Pagamento</legend>
-            <p>
-                <label for="pagamento">Forma de Pagamento:</label>
-                <select id="pagamento" name="pagamento">
-                    <option>Cartão de Crédito</option>
-                    <option>Cartão de Débito</option>
-                    <option>PIX</option>
-                    <option>Boleto</option>
-                </select>
-            </p>
+        
+            <select required>
+                <option>Cartão de Crédito</option>
+                <option>Cartão de Débito</option>
+                <option>PIX</option>
+                <option>Boleto</option>
+            </select>
+        
         </fieldset>
-        <button type="submit">Finalizar Compra</button>
-    </form>
-        </section>
+
+        <fieldset>
+            <legend>Observações</legend>
+            <textarea></textarea>
+        </fieldset>
+
+        <label>
+            <input type="checkbox" required>
+            Concordo com os termos de compra
+        </label>
+
+        <button type="submit">
+            Finalizar Compra
+        </button>
+
+        </form>
+    </section>
     </main>
     <footer class="botoes">
     <a href="produtos.html" class="nes-btn is-primary">
