@@ -1,0 +1,210 @@
+
+.produto-principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+
+    width: 100%;
+    max-width: 1400px;
+
+    align-items: start;
+}
+
+.produto-principal article,
+.produto-principal aside {
+    background-color: white;
+    border: 3px solid #697575;
+    box-shadow: 4px 4px 0 rgba(25, 98, 107, 0.2);
+}
+
+.produto-principal figure {
+    margin: 0;
+}
+
+.produto-principal img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+
+.produto-principal figcaption {
+    padding: 1rem;
+    font-size: 12px;
+}
+
+/* =========================================
+   VÍDEO
+========================================= */
+
+.video-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.video-produto h2 {
+    margin-top: 1rem;
+}
+
+.video-produto video {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+
+/* =========================================
+   INFORMAÇÕES DO PRODUTO
+========================================= */
+
+.produto-principal aside:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    align-items: center;
+    text-align: center;
+
+    padding: 2rem;
+}
+
+.produto-principal h1 {
+    line-height: 1.5;
+}
+
+.produto-principal strong {
+    color: #003049;
+    font-size: 20px;
+}
+
+fieldset {
+    border: 3px solid #697575;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 100%;
+}
+
+legend {
+    color: #19626b;
+    font-weight: bold;
+}
+
+label {
+    font-size: 12px;
+}
+
+input[type="number"] {
+    height: 40px;
+    text-align: center;
+
+    border: 2px solid #212529;
+    border-radius: 5px;
+
+    font-family: inherit;
+}
+
+button[type="submit"] {
+    height: 50px;
+
+    background-color: #19626b;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: inherit;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #003049;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   SEÇÕES INFERIORES
+========================================= */
+
+main section:not(.produto-principal) {
+    width: 90%;
+    max-width: 1200px;
+
+    background-color: white;
+
+    border: 3px solid #697575;
+    box-shadow: 4px 4px 0 rgba(25, 98, 107, 0.2);
+
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    text-align: left;
+}
+
+main section:not(.produto-principal) h2 {
+    text-align: center;
+}
+
+main ul,
+main ol {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* =========================================
+   TABELA
+========================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: rgb(185, 206, 199);
+}
+
+th,
+td {
+    border: 2px solid #697575;
+    padding: 12px;
+}
+
+th {
+    color: #19626b;
+}
+
+/* =========================================
+   AVALIAÇÕES
+========================================= */
+
+main section article {
+    border: 2px solid #6b5c04;
+    padding: 1rem;
+}
+
+main section article h3 {
+    margin-bottom: 1rem;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .produto-principal {
+        grid-template-columns: 1fr;
+    }
+
+    .produto-principal img,
+    .video-produto video {
+        height: auto;
+    }
+}
